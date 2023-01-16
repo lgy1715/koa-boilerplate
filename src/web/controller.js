@@ -21,7 +21,7 @@ exports.page = (ctx, next)=>{
     
 
     }
-
+    
     ctx.render('index', {content});
     
 
