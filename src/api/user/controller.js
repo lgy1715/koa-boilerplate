@@ -34,7 +34,7 @@ exports.login = async (ctx, next)=>{
 
 let generteToken=(payload)=>{
     return new Promise((resolve, reject)=>{
-        JsonWebTokenError.sign(payload, process.env.APP_KEY,(token)=>{
+        JsonWebTokenError.sign(payload, process.env.APP_KEY,(error, token)=>{
             if(error){reject(error);}
                 resolve(token);
         })

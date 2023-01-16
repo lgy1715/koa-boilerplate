@@ -4,7 +4,6 @@ const Router = require('@koa/router');
 const bodyParser = require('koa-bodyparser');
 const render = require('koa-ejs');
 const path = require('path');
-
 const app = new Koa();
 const router = new Router();
 
