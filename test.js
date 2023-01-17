@@ -1,5 +1,13 @@
 // 클라이언트 
 const mysql = require('mysql2');
+const crypto = require('crypto');
+
+let original = "admin1234";
+let salt = "mysalt01234";
+
+let result = crypto.pbkdf2Sync(original, salt, 50, 255, 'sha512')
+
+console.log(result, toString('base64'));
 
 // 데이터베이스와 연결 
 const connection = mysql.createConnection({
