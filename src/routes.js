@@ -16,6 +16,8 @@ const apiFeedController = require('./api/feed/controller');
 router.use(myLogging);
 
 router.post('/file/upload', upload.single('file'), require('./api/file/controller').upload);
+router.get('/file/:id', require('./api/file/controller').download);
+
 
 router.get('/', myLogging, webController.home);
 router.get('/page/:page', myLogging, webController.page);

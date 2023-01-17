@@ -8,14 +8,14 @@ exports.connection = mysql.createPool(
         password:process.env.DB_PASSWORD,
         database:process.env.DB_DATABASE,
         waitForConnections: true,
-        connectionLimi:10,
+        connectionLimit:10,
         queueLimit: 0
     }
 );
 /**조금더 가나단하게 connection pool을 사용할 수 있도록 
  * 만든 함수 입니다.
  * @param {string} queryString 문자열
- * @param {array} params 쿼리 ? 에 들어갈 파라미터들
+ * @param {array} params 쿼리 ? 에 들어갈 
  * @returns 
  */
 exports.pool = (queryString, params) =>{
