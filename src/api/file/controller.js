@@ -36,7 +36,7 @@ exports.download = async ctx=>{
     }
 
 
-    ctx.response.set("content-disposition", `attachment;filesname=${item.original_name}`);
+    ctx.response.set("content-disposition", `attachment;filename=${item.original_name}`);
     ctx.statusCode=200;
     ctx.body=fs.createReadStream(item.file_path);
 

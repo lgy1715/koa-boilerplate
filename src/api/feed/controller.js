@@ -6,12 +6,12 @@ exports.index = (ctx, next)=>{
     query.size;
     query.count;
 
-    let result = new isNewFeed('2023-01-12');
-    console.log(`날짜는 ${result} 입니다.`);
+   let result = isNewFeed('2023-01-12');
+    //console.log(`날짜는 ${result} 입니다.`);
 
     // let{color, size, count} = ctx.query;
     ctx.body = query;
-}
+} 
 
 /** 새 피드 작성 처리 */
 exports.store = (ctx,next)=>{
