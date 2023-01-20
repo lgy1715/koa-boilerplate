@@ -1,4 +1,5 @@
-const {pool} = require('../../data')
+const {pool} = require('../../data');
+const {isNeFeed} = require('../../common/formatter/date');
 
 /**
  * 업로드한 파일을 데이터베이스에 저장하는 함수
